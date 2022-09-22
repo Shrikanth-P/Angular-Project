@@ -1,0 +1,23 @@
+<h2>Programming Books List!</h2>
+    <input type="text" [(ngModel)]="value"/>
+    <button [disabled]="isdisabled" (click)="onClick()">Search</button>
+    <br><br>
+    <button (click)="isShowing =! isShowing">
+        <ng-container *ngIf="isShowing">Hide books</ng-container>
+        <ng-container *ngIf="!isShowing">show books</ng-container>
+        </button>
+
+<p>{{value}}</p>
+<ng-container *ngIf="isShowing">
+    
+    <li >
+        <img [src] = img [alt]='name'/>
+        {{name}} by {{author}}
+    </li>
+
+    <li>
+    <img [src] = img1 [alt]='name1'/>
+    {{name1}} by {{author1}}
+    </li>
+
+</ng-container>
